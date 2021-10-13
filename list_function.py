@@ -21,6 +21,13 @@ def size(my_list):
 
 
 
+def to_string(my_list, sep=', '):
+    # Function to_string()
+    string = ''
+    for i in my_list:
+        string += (str(i) + sep)
+    return string
+
 
 
 
