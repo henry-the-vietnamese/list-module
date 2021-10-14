@@ -23,10 +23,18 @@ def size(my_list):
 
 def to_string(my_list, sep=', '):
     # Function to_string()
-    string = ''
-    for i in my_list:
-        string += (str(i) + sep)
-    return string
+    if size(my_list) == 0:
+        return ''
+    else:
+        string = ''
+        COUNT = 1
+        for i in my_list:
+            if size(my_list) != COUNT:
+                string += (str(i) + sep)
+            else:
+                string += (str(i))
+            COUNT += 1
+        return string
 
 
 
