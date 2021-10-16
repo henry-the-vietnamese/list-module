@@ -11,9 +11,10 @@
 #
 
 
-
 def size(my_list):
-    """ Function size()
+    """Docstring for function size().
+
+    Process a list and return its length.
 
     Parameters
     ----------
@@ -23,7 +24,7 @@ def size(my_list):
     Returns
     -------
     int
-        The number of elements contained in the list.
+        The number of elements the list has.
     """
     LEN = 0         # Initialise a variable to keep track of each element encountered in the list.
     for _ in my_list:
@@ -31,15 +32,16 @@ def size(my_list):
     return LEN
 
 
-
 def to_string(my_list, sep=', '):
-    """ Function to_string()
+    """Docstring for function to_string().
+
+    Process a list and return a string.
 
     Parameters
     ----------
     my_list : list
         List to be converted.
-    sep : **kwargs
+    sep : str, default=', '
         Separate each element when converted.
 
     Returns
@@ -47,7 +49,6 @@ def to_string(my_list, sep=', '):
     str
         Result of the conversion of the list.
     """
-
     if size(my_list) == 0:      # If the list contains no element (an empty list), returns an empty string.
         return ''
     else:
@@ -60,7 +61,6 @@ def to_string(my_list, sep=', '):
                 string += (str(i))
             COUNT += 1
         return string
-
 
 
 def count_item(value, my_list):
