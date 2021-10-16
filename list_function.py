@@ -26,7 +26,7 @@ def size(my_list):
     int
         The number of elements the list has.
     """
-    LEN = 0         # Initialise a variable to keep track of each element encountered in the list.
+    LEN = 0                 # Initialise a variable to keep track of each element encountered in the list.
     for _ in my_list:
         LEN += 1
     return LEN
@@ -49,10 +49,11 @@ def to_string(my_list, sep=', '):
     str
         Result of the conversion of the list.
     """
-    string = ''         # Initialise an empty string to be appended later.
+    # Initialise an empty string to be appended later.
+    string = ''
 
     # Begin the conversion.
-    if size(my_list) == 0:      # If the list contains no element (an empty list), returns an empty string.
+    if size(my_list) == 0:  # If the list contains no element (an empty list), returns an empty string.
         return string
 
     else:
@@ -83,7 +84,7 @@ def count_item(value, my_list):
     int
         The occurrences of the specified value.
     """
-    COUNT = 0
+    COUNT = 0               # Initialise a variable to count the occurrences of the value.
     for i in my_list:
         if i == value:
             COUNT += 1
@@ -107,3 +108,13 @@ def search(value, my_list):
     int or None
         The location of the value in the list, or None if the value is not in the list.
     """
+    INDEX = -1              # Initialise a variable to specify the index of the value.
+    for i in my_list:
+        INDEX += 1
+        if i == value:
+            return INDEX
+    return None
+
+
+
+
