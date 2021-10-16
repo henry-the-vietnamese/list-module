@@ -35,7 +35,7 @@ def size(my_list):
 def to_string(my_list, sep=', '):
     """Docstring for the function to_string().
 
-    Process a list and return a string.
+    Process a list and return the string version of it.
 
     Parameters
     ----------
@@ -66,7 +66,7 @@ def to_string(my_list, sep=', '):
 def count_item(value, my_list):
     """Docstring for the function count_item().
 
-    Take one of a list's elements and return how many times that element occurs in the list.
+    Receive a value and return the occurrences of that value in the given list.
 
     Parameters
     ----------
@@ -80,7 +80,11 @@ def count_item(value, my_list):
     int
         The occurrences of the specified value.
     """
-
+    COUNT = 0
+    for i in my_list:
+        if i == value:
+            COUNT += 1
+    return COUNT
 
 
 
