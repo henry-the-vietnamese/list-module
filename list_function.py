@@ -49,10 +49,13 @@ def to_string(my_list, sep=', '):
     str
         Result of the conversion of the list.
     """
+    string = ''         # Initialise an empty string to be appended later.
+
+    # Begin the conversion.
     if size(my_list) == 0:      # If the list contains no element (an empty list), returns an empty string.
-        return ''
+        return string
+
     else:
-        string = ''         # Initialise an empty string to be appended later.
         COUNT = 1           # Initialise a variable to keep track of the location of the current element being iterated.
         for i in my_list:
             if size(my_list) != COUNT:
@@ -87,4 +90,20 @@ def count_item(value, my_list):
     return COUNT
 
 
+def search(value, my_list):
+    """Docstring for the function search().
 
+    Receive a value and return the location of that value in the given list.
+
+    Parameters
+    ----------
+    value : str
+        The element to be located.
+    my_list : list
+        The list to be looped through to locate the specified value.
+
+    Returns
+    -------
+    int or None
+        The location of the value in the list, or None if the value is not in the list.
+    """
