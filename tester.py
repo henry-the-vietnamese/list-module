@@ -5,15 +5,15 @@
 # Author:       Tan Duc Mai
 # Email:        tan.duc.work@gmail.com
 # Date:         13-Oct-2021
-# Description:  Test file for main.py to check if each of its pre-defined
-#               function works properly.
+# Description:  Test file for function_defined.py to check if each of its
+#               pre-defined function works properly.
 #   I hereby declare that I completed this work without any improper help
 #   from a third party and without using any aids other than those cited.
 #
 
 
 # ------------------------------- Module Import -------------------------------
-import list_function
+import function_defined
 
 
 # ---------------------------- Function Definitions ---------------------------
