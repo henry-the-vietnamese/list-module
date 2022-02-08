@@ -130,3 +130,50 @@ def search(value, my_list):
     return value_index
 
 
+def insert_item(value, insert_position, my_list):
+    """Return a copy of my_list with the value inserted into the list
+       at the index specified by insert_position.
+
+    Parameters
+    ----------
+    value
+        The value to be inserted into the list (type not specified).
+    insert_position : int
+        The index which the value to be inserted into.
+        1. If the insert_position is greater than the length of the list,
+        insert the value at the end of the list. 
+        2. If the insert_position is less than or equal to zero, insert the
+        value at the start of the list.
+    my_list : list
+        The original list to be processed to create a new one.
+
+    Returns
+    -------
+    list
+        The copy of my_list that has the new value inserted into
+        the specified position.
+    """
+    # Initialise an empty list to be appended later.
+    copy = []
+
+    # Three cases of the value of insert_position.
+    if insert_position > size(my_list):
+        for index, item in enumerate(my_list):
+            copy.append(item)
+        copy.append(value)
+    elif insert_position <= 0:
+        copy.append(value)
+        for index, item in enumerate(my_list):
+            copy.append(item)
+    else:
+        index = 0
+        for item in my_list:
+            if index != insert_position:
+                copy.append(item)
+            else:
+                copy.append(value)
+                index += 1
+            index += 1
+
+    return copy
+
