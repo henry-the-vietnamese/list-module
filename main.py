@@ -5,12 +5,13 @@
 # Author:       Tan Duc Mai
 # Email:        tan.duc.work@gmail.com
 # Date:         13-Oct-2021
-# Description:  Define some of the list functions.
+# Description:  Define some of the major list functions.
 #   I hereby declare that I completed this work without any improper help
 #   from a third party and without using any aids other than those cited.
 #
 
 
+# ---------------------------- Function Definitions ---------------------------
 def size(my_list):
     """Docstring for the function size().
 

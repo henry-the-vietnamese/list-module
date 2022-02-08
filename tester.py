@@ -5,15 +5,18 @@
 # Author:       Tan Duc Mai
 # Email:        tan.duc.work@gmail.com
 # Date:         13-Oct-2021
-# Description:  Test file for list_function.py to see check if each predefined function works properly.
+# Description:  Test file for main.py to check if each of its pre-defined
+#               function works properly.
 #   I hereby declare that I completed this work without any improper help
 #   from a third party and without using any aids other than those cited.
 #
 
 
+# ------------------------------- Module Import -------------------------------
 import list_function
 
 
+# ---------------------------- Function Definitions ---------------------------
 def assertEqual(result, expected, worth):
     try:
         global marks, max_marks
@@ -49,6 +52,7 @@ def has_sequence(string, letters):
     return False
 
 
+# ---------------------------------- Program ----------------------------------
 # --- Start Test Code --- #
 print("START TESTING")
 
