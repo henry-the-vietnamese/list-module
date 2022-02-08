@@ -87,7 +87,7 @@ def count_item(value, my_list):
     int
         The occurrences of the specified value.
     """
-    # Initialise a variable to count the occurrences of the value.
+    # Initialise an accumulator to 0 that counts the occurrences of the value.
     count = 0
 
     for i in my_list:
@@ -113,14 +113,20 @@ def search(value, my_list):
         The location of the value in the list,
         or None if the value is not in the list.
     """
-    # Initialise a variable to specify the index of the value.
+    # Initialise a variable to specify the start of counting.
+    # When it sees index += 1, index counting starts at 0.
     index = -1
+
+    # Initialise a placeholder for the index of the value.
+    # If the value is not in the list, that is the value returned.
+    value_index = None
+
+    # Start the loop of counting.
     for i in my_list:
         index += 1
-        if i == value:
-            return index
-    return None
+        if i == value and not value_index:
+            value_index = index
 
-
+    return value_index
 
 
