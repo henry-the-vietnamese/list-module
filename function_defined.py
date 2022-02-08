@@ -17,7 +17,7 @@ def size(my_list):
 
     Parameters
     ----------
-    my_list : list
+    list
         List whose elements are to be counted.
 
     Returns
@@ -25,10 +25,14 @@ def size(my_list):
     int
         The number of elements the list has.
     """
-    LEN = 0                 # Initialise a variable to keep track of each element encountered in the list.
+    # Initialise a variable to keep track of each element
+    # encountered in the list.
+    length = 0
+
     for _ in my_list:
-        LEN += 1
-    return LEN
+        length += 1
+
+    return length
 
 
 def to_string(my_list, sep=', '):
@@ -50,22 +54,26 @@ def to_string(my_list, sep=', '):
     string = ''
 
     # Begin the conversion.
-    if size(my_list) == 0:  # If the list contains no element (an empty list), returns an empty string.
-        return string
+    # If the list contains no element (an empty list), returns an empty string.
+    if size(my_list) == 0:
+        return ''
 
     else:
-        COUNT = 1           # Initialise a variable to keep track of the location of the current element being iterated.
+        # Initialise a variable to keep track of the location of the current
+        # element being iterated.
+        count = 1
         for i in my_list:
-            if size(my_list) != COUNT:
+            if size(my_list) != count:
                 string += (str(i) + sep)
             else:
                 string += (str(i))
-            COUNT += 1
+            count += 1
         return string
 
 
 def count_item(value, my_list):
-    """Receive a value and return the occurrences of that value in the given list.
+    """Receive a value and return the occurrences of that value
+       in the given list.
 
     Parameters
     ----------
@@ -79,11 +87,14 @@ def count_item(value, my_list):
     int
         The occurrences of the specified value.
     """
-    COUNT = 0               # Initialise a variable to count the occurrences of the value.
+    # Initialise a variable to count the occurrences of the value.
+    count = 0
+
     for i in my_list:
         if i == value:
-            COUNT += 1
-    return COUNT
+            count += 1
+
+    return count
 
 
 def search(value, my_list):
@@ -99,13 +110,15 @@ def search(value, my_list):
     Returns
     -------
     int or None
-        The location of the value in the list, or None if the value is not in the list.
+        The location of the value in the list,
+        or None if the value is not in the list.
     """
-    INDEX = -1              # Initialise a variable to specify the index of the value.
+    # Initialise a variable to specify the index of the value.
+    index = -1
     for i in my_list:
-        INDEX += 1
+        index += 1
         if i == value:
-            return INDEX
+            return index
     return None
 
 
