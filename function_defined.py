@@ -13,9 +13,7 @@
 
 # ---------------------------- Function Definitions ---------------------------
 def size(my_list):
-    """Docstring for the function size().
-
-    Process a list and return its length.
+    """Process a list and return its length.
 
     Parameters
     ----------
@@ -34,9 +32,7 @@ def size(my_list):
 
 
 def to_string(my_list, sep=', '):
-    """Docstring for the function to_string().
-
-    Process a list and return the string version of it.
+    """Process a list and return the string version of it.
 
     Parameters
     ----------
@@ -69,9 +65,7 @@ def to_string(my_list, sep=', '):
 
 
 def count_item(value, my_list):
-    """Docstring for the function count_item().
-
-    Receive a value and return the occurrences of that value in the given list.
+    """Receive a value and return the occurrences of that value in the given list.
 
     Parameters
     ----------
@@ -93,9 +87,7 @@ def count_item(value, my_list):
 
 
 def search(value, my_list):
-    """Docstring for the function search().
-
-    Receive a value and return the location of that value in the given list.
+    """Receive a value and return the location of that value in the given list.
 
     Parameters
     ----------
