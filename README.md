@@ -2,6 +2,10 @@
 Create a list module containing several common Python list methods and built-in
 functions.
 
+Work on this project helps build a strong understanding of **lists** in Python.
+It is important to not only learn **lists**, but also comprehend and be able to
+implement them.
+
 # Implementation
 The program *list_function.py* solely contains functions that have been defined,
 whereas the program *tester.py* is a test driver that is able to be run to check
@@ -17,7 +21,7 @@ The following functions are defined:
 6. remove_index(remove_position, my_list)
 7. get_unique(my_list)
 
-# Usage of each function
+# Usage
 1. size() processes a list and return its length.
 2. to_string() processes a list and return the string version of it.
 3. count_item() receives a value and return the occurrences of that value in the
@@ -30,6 +34,13 @@ The following functions are defined:
    specified index removed from the list.
 7. get_unique receives a list and return a copy which contains only the unique
    items from the original list.
+
+# Restrictions
+In order to keep the idea of the project pure, the followings are restricted to
+use:
+* Built-in functions such as len(), list(), slice(), sum(), min(), max().
+* List methods such as index(), pop(), count(), insert().
+* String methods such as join(), split(), count(), index().
 
 # Sample Output
 ```
