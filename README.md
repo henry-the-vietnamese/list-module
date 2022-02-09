@@ -2,9 +2,9 @@
 Create a list module containing several common Python list methods and built-in
 functions.
 
-Work on this project helps build a strong understanding of **lists** in Python.
-It is important to not only learn **lists**, but also comprehend and be able to
-implement them.
+Working on this project helps build a strong understanding of **lists** in
+Python. It also indicates my ability to understand how each list method and
+built-in function works; and to implement them in my program.
 
 # Implementation
 The program *list_function.py* solely contains functions that have been defined,
