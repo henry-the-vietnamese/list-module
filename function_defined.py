@@ -113,9 +113,8 @@ def search(value, my_list):
         The location of the value in the list,
         or None if the value is not in the list.
     """
-    # Initialise a variable to specify the start of counting.
-    # When it sees index += 1, index counting starts at 0.
-    index = -1
+    # Initialise a variable to specify looping form the start.
+    index = 0
 
     # Initialise a placeholder for the index of the value.
     # If the value is not in the list, that is the value returned.
@@ -123,9 +122,9 @@ def search(value, my_list):
 
     # Start the loop of counting.
     for i in my_list:
-        index += 1
         if i == value and not value_index:
             value_index = index
+        index += 1
 
     return value_index
 
