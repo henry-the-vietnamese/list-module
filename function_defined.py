@@ -230,5 +230,15 @@ def get_unique(my_list):
     list
         The copy of my_list that does not contain any duplicate items.
     """
+    # Initialise an empty list to be appended later.
+    no_duplicate = []
 
+    # Initialise a temporary list to keep track of values that has been looped.
+    temp = []
 
+    for item in my_list:
+        if item not in temp:
+            no_duplicate.append(item)
+            temp.append(item)
+
+    return no_duplicate
