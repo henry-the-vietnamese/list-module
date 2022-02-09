@@ -130,8 +130,8 @@ def search(value, my_list):
 
 
 def insert_item(value, insert_position, my_list):
-    """Return a copy of my_list with the value inserted into the list
-       at the index specified by insert_position.
+    """Receive a list and return a copy with a value inserted into the list
+       at the specified index.
 
     Parameters
     ----------
@@ -177,8 +177,8 @@ def insert_item(value, insert_position, my_list):
 
 
 def remove_index(remove_position, my_list):
-    """Return a copy of my_list with the item at the index specified by
-       remove_position, removed from the list.
+    """Receive a list and return a copy with the item at the specified index
+       removed from the list.
 
     Parameters
     ----------
@@ -214,3 +214,21 @@ def remove_index(remove_position, my_list):
                 pass
 
     return copy
+
+
+def get_unique(my_list):
+    """Receive a list and return a copy which contains only the unique items
+       from the original list.
+
+    Parameters
+    ----------
+    list
+        The original list to be processed to create a new one.
+
+    Returns
+    -------
+    list
+        The copy of my_list that does not contain any duplicate items.
+    """
+
+
