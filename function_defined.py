@@ -140,7 +140,7 @@ def insert_item(value, insert_position, my_list):
     insert_position : int
         The index which the value to be inserted into.
         1. If the insert_position is greater than the length of the list,
-        insert the value at the end of the list. 
+        insert the value at the end of the list.
         2. If the insert_position is less than or equal to zero, insert the
         value at the start of the list.
     my_list : list
@@ -165,14 +165,52 @@ def insert_item(value, insert_position, my_list):
         for index, item in enumerate(my_list):
             copy.append(item)
     else:
-        index = 0
-        for item in my_list:
+        for index, item in enumerate(my_list):
             if index != insert_position:
                 copy.append(item)
             else:
                 copy.append(value)
                 copy.append(item)
-            index += 1
+                index -= 1
 
     return copy
 
+
+def remove_index(remove_position, my_list):
+    """Return a copy of my_list with the item at the index specified by
+       remove_position, removed from the list.
+
+    Parameters
+    ----------
+    remove_position : int
+        The index where the item is to be removed from the list.
+        1. If the remove_position is greater than the length of the list,
+        remobe the item at the end of the list.
+        2. If the remove_position is less than or equal to zero, remove the
+        item at the start of the list.
+    my_list : list
+        The original list to be processed to create a new one.
+
+    Returns
+    -------
+    list
+        The copy of my_list that has an item at the specified position removed.
+    """
+    # Initialise an empty list to be appended later.
+    copy = []
+
+    # Three cases of the value of remove_position.
+    if remove_position > size(my_list):
+        for item in my_list[:-1]:
+            copy.append(item)
+    elif remove_position <= 0:
+        for item in my_list[1:]:
+            copy.append(item)
+    else:
+        for index, item in enumerate(my_list):
+            if index != remove_position:
+                copy.append(item)
+            else:
+                pass
+
+    return copy
