@@ -19,13 +19,13 @@ import function_defined
 # ---------------------------- Function Definitions ---------------------------
 def assertEqual(result, expected, worth):
     try:
-        global marks, max_marks
+        global marks, MAX_MARK
         print("Expected:", expected)
         print(f"{'Got':>8s}: {result}")
         if expected == result:
             marks += worth
             marks = int(marks) if float(marks).is_integer() else marks
-            print(f"\tPASSED {marks}/{max_marks} (+{worth})")
+            print(f"\tPASSED {marks}/{MAX_MARK} (+{worth})")
             return True
         else:
             print("\tFAILED")
@@ -55,10 +55,13 @@ def has_sequence(string, letters):
 # ------------------------------- Main Function -------------------------------
 if __name__ == '__main__':
     # --- Start Testing Code --- #
-    print("START TESTING")
+    print("-----------------",
+          "| START TESTING |",
+          "-----------------",
+          sep='\n')
 
     marks = 0.0
-    max_marks = 26
+    MAX_MARK = 26
 
     print("\nSIZE")
     str_list = ['r', 'i', 'n', 'g', 'i', 'n', 'g']
@@ -70,14 +73,20 @@ if __name__ == '__main__':
 
     print("\nTO_STRING")
     str_list = ['r', 'i', 'n', 'g', 'i', 'n', 'g']
-    if not assertEqual(function_defined.to_string(str_list), 'r, i, n, g, i, n, g', 1.5):
-        if not assertEqual(function_defined.to_string(str_list), 'r, i, n, g, i, n, g, ', 0.5):
-            assertEqual(function_defined.to_string(str_list), 'r, i, n, g, i, n, g,', 0.5)
-    if not assertEqual(function_defined.to_string(str_list, sep='-'), 'r-i-n-g-i-n-g', 1.5):
-        assertEqual(function_defined.to_string(str_list, sep='-'), 'r-i-n-g-i-n-g-', 0.5)
+    if not assertEqual(function_defined.to_string(str_list),
+                       'r, i, n, g, i, n, g', 1.5):
+        if not assertEqual(function_defined.to_string(str_list),
+                           'r, i, n, g, i, n, g, ', 0.5):
+            assertEqual(function_defined.to_string(str_list),
+                        'r, i, n, g, i, n, g,', 0.5)
+    if not assertEqual(function_defined.to_string(str_list, sep='-'),
+                       'r-i-n-g-i-n-g', 1.5):
+        assertEqual(function_defined.to_string(str_list, sep='-'),
+                    'r-i-n-g-i-n-g-', 0.5)
     num_list = [1, 7, 2, 3, 7, 7]
     assertEqual(function_defined.to_string(num_list), '1, 7, 2, 3, 7, 7', 0.5)
-    assertEqual(function_defined.to_string(num_list, sep=' - '), '1 - 7 - 2 - 3 - 7 - 7', 0.5)
+    assertEqual(function_defined.to_string(num_list, sep=' - '),
+                '1 - 7 - 2 - 3 - 7 - 7', 0.5)
 
     print("\nCOUNT_ITEM")
     str_list = ['r', 'i', 'n', 'g', 'i', 'n', 'g']
@@ -133,16 +142,19 @@ if __name__ == '__main__':
     new_list = function_defined.get_unique(num_list)
     assertEqual(new_list, [1, 3, 2, 4], 1)
 
-    print("\nEND TESTING\n")
+    print("\n---------------",
+          "| END TESTING |",
+          "---------------\n",
+          sep='\n')
     marks = int(marks) if float(marks).is_integer() else marks
-    print(f"Final Result: {marks}/{max_marks}\n\n")
+    print(f"Final Result: [{marks}/{MAX_MARK}] \n")
 
-    if marks == max_marks:
-        print("Well done programmer!")
-        print("Time to get started on part 2!")
-    elif marks > max_marks / 2:
+    if marks == MAX_MARK:
+        print("Well done 'list' master!")
+    elif marks > MAX_MARK / 2:
         print("Good work, keep it up!")
     else:
-        print("You can use this test driver to check your progress.")
-        print("Compare the expected result to the actual result.")
-        print("This should help guide you.")
+        print("Use this test driver to check your progress.",
+              "Compare the expected result to the actual result.",
+              "This should help guide you.",
+              sep='\n')
