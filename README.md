@@ -1,5 +1,35 @@
-# list-module
-Create a list module containing several Python list methods.
+# Aim
+Create a list module containing several common Python list methods and built-in
+functions.
+
+# Implementation
+The program *list_function.py* solely contains functions that have been defined,
+whereas the program *tester.py* is a test driver that is able to be run to check
+the successful usage of each pre-defined function in the program
+*list_function.py*.
+
+The following functions are defined:
+1. size(my_list)
+2. to_string(my_list , sep=', ')
+3. count_item(value, my_list)
+4. search(value, my_list)
+5. insert_item(value, insert_position. my_list)
+6. remove_index(remove_position, my_list)
+7. get_unique(my_list)
+
+# Usage of each function
+1. size() processes a list and return its length.
+2. to_string() processes a list and return the string version of it.
+3. count_item() receives a value and return the occurrences of that value in the
+   given list.
+4. search() receives a value and return the location of that value in the given
+   list.
+5. insert_item() receives a list and return a copy with a value inserted into
+   the list at the specified index.
+6. remove_index() receives a list and return a copy with the item at the
+   specified index removed from the list.
+7. get_unique receives a list and return a copy which contains only the unique
+   items from the original list.
 
 # Sample Output
 ```
