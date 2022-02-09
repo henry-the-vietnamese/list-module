@@ -172,7 +172,7 @@ def insert_item(value, insert_position, my_list):
                 copy.append(item)
             else:
                 copy.append(value)
-                index += 1
+                copy.append(item)
             index += 1
 
     return copy
