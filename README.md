@@ -32,7 +32,7 @@ The following functions are defined:
    the list at the specified index.
 6. remove_index() receives a list and return a copy with the item at the
    specified index removed from the list.
-7. get_unique receives a list and return a copy which contains only the unique
+7. get_unique() receives a list and return a copy which contains only the unique
    items from the original list.
 
 # Restrictions
