@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 #
-# File:         function_defined.py
+# File:         list_function.py
 # Author:       Tan Duc Mai
 # Email:        tan.duc.work@gmail.com
 # Date:         13-Oct-2021
